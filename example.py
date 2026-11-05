@@ -1,8 +1,8 @@
 
 # First, we import the utilities
-from utils.class_Disk_Jockey import Disk_Jockey
-from utils.class_Journal import Journal
-from utils.class_Semaphor import Semaphor
+from project_management_utils.Disk_Jockey import Disk_Jockey
+from project_management_utils.Journal import Journal
+from project_management_utils.Semaphor import Semaphor
 
 import numpy as np
 
@@ -15,8 +15,6 @@ class John_Physics:
         self.ID = ID # A string that identifies this instance of John_Physics. It is the "experiment's label".
 
         # Firstly, we initialise an instance of Journal (for logging) and Disk Jockey (for data management)
-        # We can have an instance of Sempahor, too, but this is not practical, since Journal can use its
-        # own Semaphor.
 
         self.j = Journal(log_verbosity)
         # Verbosity tells the instance of John_Physics to ignore logs of higher verbosity than its own.
